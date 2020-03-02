@@ -1,11 +1,12 @@
 import React, { FunctionComponent } from "react";
-import { makeStyles, Grid } from "@material-ui/core";
+import { makeStyles, Grid, Typography } from "@material-ui/core";
 import { Map, Marker, Popup, TileLayer } from "react-leaflet";
 
-import { SEO, GreenMarker } from "../components";
+import { SEO, PageHeader, Legend } from "../components";
 import { MainLayout } from "../layouts";
-import locationData from "../assets/hostile.yaml";
-import { Icon } from "leaflet";
+import hostileData from "../data/hostile.yaml";
+import { determineMarkerIcon } from "../utils";
+import { ILocation } from "../data";
 
 const useStyles = makeStyles(theme => ({
   //   infoDescription: {
@@ -16,29 +17,22 @@ const useStyles = makeStyles(theme => ({
   //   },
 }));
 
-enum LocationTypes {
-  NA,
-  Bench,
-  Camera
-}
-
 const IndexPage: FunctionComponent = () => {
   const classes = useStyles();
-  function determineMarkerType(stringType: string): LocationTypes {
-    switch (stringType) {
-      case "CAMERA":
-        return LocationTypes.Camera;
-      case "BENCH":
-        return LocationTypes.Bench;
-      default:
-        return LocationTypes.NA;
-    }
-  }
 
   return (
     <MainLayout>
       <SEO />
       <Grid container>
+        {/* 
+          TODO: This map still needs the legend thats in the map, not just the one below the map.
+          */}
+        <PageHeader
+          title={"Hostile.Design"}
+          subtitle={
+            "Ethical butcher readymade pitchfork ramps trust fund artisan vaporware bitters you probably haven't heard of them shoreditch. Beard cliche crucifix art party artisan vegan. YOLO lomo subway tile fashion axe, shaman poke mixtape kogi food truck unicorn yr ramps single-origin coffee. Kombucha tumblr salvia hoodie food truck actually messenger bag woke tumeric swag single-origin coffee pinterest."
+          }
+        ></PageHeader>
         <Map
           center={[40.7599456, -111.9029772]}
           zoom={13}
@@ -48,34 +42,18 @@ const IndexPage: FunctionComponent = () => {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           />
-          {locationData.locations.map(
-            (
-              info: {
-                type: string;
-                lat: number;
-                long: number;
-                notes: string;
-              },
-              index: number
-            ) => {
-              const { type, lat, long, notes } = info;
-              console.log(info);
-              var markerType = determineMarkerType(type);
-              return (
-                <Marker icon={GreenMarker} key={index} position={[lat, long]}>
-                  <Popup>{notes}</Popup>
-                </Marker>
-              );
-            }
-          )}
-          {/* <Marker position={[40.7599456, -111.9029772]}>
-              <Popup>
-                A pretty CSS3 popup.
-                <br />
-                Easily customizable.
-              </Popup>
-            </Marker> */}
+          {hostileData.locations.map((info: ILocation, index: number) => {
+            const { type, lat, long, notes } = info;
+            var markerIcon = determineMarkerIcon(type);
+            return (
+              <Marker icon={markerIcon} key={index} position={[lat, long]}>
+                <Popup>{notes}</Popup>
+              </Marker>
+            );
+          })}
         </Map>
+
+        <Legend></Legend>
       </Grid>
     </MainLayout>
   );

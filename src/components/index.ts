@@ -7,4 +7,6 @@ export { default as Footer } from "./Footer";
 export { default as Logo } from "./Logo";
 export { default as ProcessStep } from "./ProcessStep";
 export { default as Biography } from "./Biography";
+export { default as Legend } from "./Legend";
+export { default as LegendEntry } from "./LegendEntry";
 export * from "./LeafletMarkers";

@@ -1,0 +1,67 @@
+categories:
+  - name: CAMERA
+    friendlyName: Camera
+    icon: BLUE
+    legendEntry: "Cameras suck for reasons"
+  - name: SIGNAGE
+    friendlyName: Signage
+    icon: GOLD
+    legendEntry: "Mean signage sucks for reasons"
+  - name: SPIKES
+    friendlyName: Spikes
+    icon: GREEN
+    legendEntry: "Spikes suck for reasons"
+  - name: BLOCKADE
+    friendlyName: Blockade
+    icon: VIOLET
+    legendEntry: "Blockades suck for reasons"
+  - name: BENCH
+    friendlyName: Bench
+    icon: RED
+    legendEntry: "Bad benches suck for reasons"
+  - name: GHOST_AMENITIES
+    friendlyName: Ghost Amenities
+    icon: GREY
+    legendEntry: "These are weird, expensive, and suck"
+  - name: HARDENED_SECURITY
+    friendlyName: Hardened Security
+    icon: BLACK
+    legendEntry: "WTF even is this? This isnt a military base!"
+  - name: SENSORY
+    friendlyName: Sensory
+    icon: ORANGE
+    legendEntry: "Ahhhh make it stop!"
+
+locations:
+  - type: CAMERA
+    long: -111.903
+    lat: 40.760
+    notes: "This camera sux eggs"
+  - type: SIGNAGE
+    long: -111.905
+    lat: 40.760
+    notes: "This signage is mean"
+  - type: SPIKES
+    long: -111.907
+    lat: 40.760
+    notes: "These spikes are cruel"
+  - type: BLOCKADE
+    long: -111.909
+    lat: 40.760
+    notes: "This blockade is bs"
+  - type: BENCH
+    long: -111.911
+    lat: 40.760
+    notes: "This bench is purposefully bad"
+  - type: GHOST_AMENITIES
+    long: -111.913
+    lat: 40.760
+    notes: "Why arent there any bathrooms or benches in this otherwise maintained and totally potentially useable space?"
+  - type: HARDENED_SECURITY
+    long: -111.915
+    lat: 40.760
+    notes: "Crazy bollards that dont serve a logical purpose!?!?"
+  - type: SENSORY
+    long: -111.917
+    lat: 40.760
+    notes: "Whats with these crazy bright harsh lights? Also y'all hear that annoying high pitch sound?"
