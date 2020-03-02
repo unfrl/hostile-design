@@ -1,0 +1,13 @@
+locations:
+  - type: CAMERA
+    long: -111.903
+    lat: 40.760
+    notes: "This camera sux eggs"
+  - type: BENCH
+    long: -111.901
+    lat: 40.759
+    notes: "This bench sux too"
+  - type: CAMERA
+    long: -111.93
+    lat: 40.759
+    notes: "This camera is extra evil"

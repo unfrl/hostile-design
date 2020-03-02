@@ -1,88 +1,84 @@
 import React, { FunctionComponent } from "react";
-import { makeStyles, Grid, Typography, Button } from "@material-ui/core";
-import { Link } from "gatsby";
+import { makeStyles, Grid } from "@material-ui/core";
+import { Map, Marker, Popup, TileLayer } from "react-leaflet";
 
-import { ImageTransition, SEO, ServicesCard } from "../components";
+import { SEO, GreenMarker } from "../components";
 import { MainLayout } from "../layouts";
-import polestarMobile from "../assets/polestar-mobile.webp";
+import locationData from "../assets/hostile.yaml";
+import { Icon } from "leaflet";
 
 const useStyles = makeStyles(theme => ({
-    infoContainer: {
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        padding: theme.spacing(4),
-        marginTop: theme.spacing(4),
-        [theme.breakpoints.up("md")]: {
-            marginTop: 0,
-        },
-    },
-    infoTitle: {
-        fontSize: "2.5rem",
-        textAlign: "center",
-        marginBottom: theme.spacing(2),
-        [theme.breakpoints.up("md")]: {
-            fontSize: "3rem",
-            textAlign: "left",
-        },
-    },
-    infoDescription: {
-        textAlign: "center",
-        [theme.breakpoints.up("md")]: {
-            textAlign: "left",
-        },
-    },
-    link: {
-        textDecoration: "none",
-        color: "inherit",
-    },
-    exploreServices: {
-        display: "flex",
-        marginTop: theme.spacing(4),
-        justifyContent: "center",
-        [theme.breakpoints.up("md")]: {
-            justifyContent: "flex-start",
-        },
-    },
-    largeImage: {
-        padding: theme.spacing(4),
-    },
+  //   infoDescription: {
+  //     textAlign: "center",
+  //     [theme.breakpoints.up("md")]: {
+  //       textAlign: "left"
+  //     }
+  //   },
 }));
 
-const IndexPage: FunctionComponent = () => {
-    const classes = useStyles();
+enum LocationTypes {
+  NA,
+  Bench,
+  Camera
+}
 
-    return (
-        <MainLayout>
-            <SEO />
-            <Grid container spacing={3}>
-                <Grid item sm={12} md={6} className={classes.infoContainer}>
-                    <Typography variant="h1" className={classes.infoTitle}>
-                        Custom Software Design & Development
-                    </Typography>
-                    <Typography variant="body1" gutterBottom className={classes.infoDescription}>
-                        Software solutions built using the latest in web and mobile technologies
-                        tailored to your company's needs.
-                    </Typography>
-                    <div className={classes.exploreServices}>
-                        <Link to="/services" className={classes.link}>
-                            <Button variant="contained" size="large" color="primary">
-                                Explore our Services
-                            </Button>
-                        </Link>
-                    </div>
-                </Grid>
-                <Grid item sm={12} md={6}>
-                    <ImageTransition
-                        alt="mobile-app-screenshot"
-                        src={polestarMobile}
-                        className={classes.largeImage}
-                    />
-                </Grid>
-            </Grid>
-            <ServicesCard />
-        </MainLayout>
-    );
+const IndexPage: FunctionComponent = () => {
+  const classes = useStyles();
+  function determineMarkerType(stringType: string): LocationTypes {
+    switch (stringType) {
+      case "CAMERA":
+        return LocationTypes.Camera;
+      case "BENCH":
+        return LocationTypes.Bench;
+      default:
+        return LocationTypes.NA;
+    }
+  }
+
+  return (
+    <MainLayout>
+      <SEO />
+      <Grid container>
+        <Map
+          center={[40.7599456, -111.9029772]}
+          zoom={13}
+          style={{ height: "100vh", width: "100%" }}
+        >
+          <TileLayer
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+          />
+          {locationData.locations.map(
+            (
+              info: {
+                type: string;
+                lat: number;
+                long: number;
+                notes: string;
+              },
+              index: number
+            ) => {
+              const { type, lat, long, notes } = info;
+              console.log(info);
+              var markerType = determineMarkerType(type);
+              return (
+                <Marker icon={GreenMarker} key={index} position={[lat, long]}>
+                  <Popup>{notes}</Popup>
+                </Marker>
+              );
+            }
+          )}
+          {/* <Marker position={[40.7599456, -111.9029772]}>
+              <Popup>
+                A pretty CSS3 popup.
+                <br />
+                Easily customizable.
+              </Popup>
+            </Marker> */}
+        </Map>
+      </Grid>
+    </MainLayout>
+  );
 };
 
 export default IndexPage;

@@ -1,4 +1,7 @@
 var plugins = [{
+      plugin: require('/home/matt/dev/hostile-design/node_modules/gatsby-plugin-react-leaflet/gatsby-ssr'),
+      options: {"plugins":[],"linkStyles":true},
+    },{
       plugin: require('/home/matt/dev/hostile-design/node_modules/gatsby-plugin-material-ui/gatsby-ssr'),
       options: {"plugins":[],"stylesProvider":{"injectFirst":true}},
     },{
