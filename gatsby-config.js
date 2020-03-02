@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: "Unfrl",
-    siteUrl: "https://unfrl.com",
+    title: "Hostile.Design",
+    siteUrl: "https://hostile.design",
     description: "Custom Software Design & Development",
     author: "Unfrl",
     publisher: "Unfrl",
@@ -43,8 +43,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        name: "Unfrl",
-        short_name: "Unfrl",
+        name: "Hostile.Design",
+        short_name: "Hostile.Design",
         start_url: "/",
         background_color: "#303030",
         theme_color: "#212121",

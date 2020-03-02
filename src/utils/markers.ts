@@ -12,6 +12,7 @@ import {
   OrangeMarker
 } from "../components";
 
+//Stolen from: https://github.com/pointhi/leaflet-color-markers
 import blueMarkerLargeImg from "../assets/leaflet-icons/marker-icon-2x-blue.png";
 import goldMarkerLargeImg from "../assets/leaflet-icons/marker-icon-2x-gold.png";
 import redMarkerLargeImg from "../assets/leaflet-icons/marker-icon-2x-red.png";

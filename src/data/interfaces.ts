@@ -26,6 +26,7 @@ export interface ICategory {
   friendlyName: string;
   icon: MarkerIcons;
   legendEntry: string;
+  infoEntry: string;
 }
 
 //This is the expected structure of the data in hostile.yaml under the 'locations' list

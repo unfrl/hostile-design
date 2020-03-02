@@ -1,7 +1,7 @@
 {
-  "name": "unfrl-www",
+  "name": "hostile-design",
   "version": "1.0.0",
-  "description": "Unfrl Website (done in Gatsby and Typescript)",
+  "description": "Hostile.Design Website (done in Gatsby and Typescript)",
   "author": "Unfrl",
   "license": "MIT",
   "scripts": {
