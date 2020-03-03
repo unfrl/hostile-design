@@ -102,7 +102,7 @@ export default class SEO extends React.Component<ISEOProps, any> {
                 href={LOGO}
                 sizes="16x16"
               />
-              <script type="application/ld+json">{`
+              {/* <script type="application/ld+json">{`
                             {
                                 "@context": "https://schema.org",
                                 "@type": "Organization",
@@ -180,7 +180,7 @@ export default class SEO extends React.Component<ISEOProps, any> {
                                 "description": "Custom Software Design & Development. Software solutions built using the latest in web and mobile technologies tailored to your company's needs.",
                                 "image": "https://i.imgur.com/tpUuWHc.png"
                             }
-                        `}</script>
+                        `}</script> */}
             </Helmet>
           );
         }}
