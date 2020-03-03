@@ -14,6 +14,8 @@ import hostileData from "../data/hostile.yaml";
 import { determineMarkerIconFromCategory } from "../utils";
 import { ILocation } from "../data";
 
+import "../styles/leaflet.css";
+
 const useStyles = makeStyles(theme => ({
   //   infoDescription: {
   //     textAlign: "center",
