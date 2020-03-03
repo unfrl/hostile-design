@@ -63,15 +63,6 @@ const CountermeasureCard: FunctionComponent<ICountermeasureCardProps> = props =>
                       <Typography>{countermeasure.description}</Typography>
                     </Grid>
                   </Grid>
-                  //   <Card>
-                  //     <CardHeader
-                  //       title={countermeasure.title}
-                  //       avatar={<PhotoCameraIcon />}
-                  //     />
-                  //     <CardContent>
-                  //       <Typography>{countermeasure.description}</Typography>
-                  //     </CardContent>
-                  //   </Card>
                 );
               }
             )}
