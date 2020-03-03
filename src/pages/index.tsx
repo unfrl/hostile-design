@@ -20,19 +20,9 @@ const useStyles = makeStyles(theme => ({
 const IndexPage: FunctionComponent = () => {
   const classes = useStyles();
 
-  return (
-    <MainLayout>
-      <SEO />
-      <Grid container>
-        {/* 
-          TODO: This map still needs the legend thats in the map, not just the one below the map.
-          */}
-        <PageHeader
-          title={"Hostile.Design"}
-          subtitle={
-            "Ethical butcher readymade pitchfork ramps trust fund artisan vaporware bitters you probably haven't heard of them shoreditch. Beard cliche crucifix art party artisan vegan. YOLO lomo subway tile fashion axe, shaman poke mixtape kogi food truck unicorn yr ramps single-origin coffee. Kombucha tumblr salvia hoodie food truck actually messenger bag woke tumeric swag single-origin coffee pinterest."
-          }
-        ></PageHeader>
+  function RenderMap() {
+    if (typeof window !== "undefined") {
+      return (
         <Map
           center={[40.7599456, -111.9029772]}
           zoom={13}
@@ -52,8 +42,26 @@ const IndexPage: FunctionComponent = () => {
             );
           })}
         </Map>
+      );
+    }
+    return null;
+  }
 
-        <Legend></Legend>
+  return (
+    <MainLayout>
+      <SEO />
+      <Grid container>
+        {/* 
+          TODO: This map still needs the legend thats in the map, not just the one below the map.
+          */}
+        <PageHeader
+          title={"Hostile.Design"}
+          subtitle={
+            "Ethical butcher readymade pitchfork ramps trust fund artisan vaporware bitters you probably haven't heard of them shoreditch. Beard cliche crucifix art party artisan vegan. YOLO lomo subway tile fashion axe, shaman poke mixtape kogi food truck unicorn yr ramps single-origin coffee. Kombucha tumblr salvia hoodie food truck actually messenger bag woke tumeric swag single-origin coffee pinterest."
+          }
+        ></PageHeader>
+        <RenderMap />
+        <Legend />
       </Grid>
     </MainLayout>
   );

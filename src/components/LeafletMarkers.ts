@@ -1,4 +1,5 @@
 import { Icon } from "leaflet";
+import { Marker } from "react-leaflet";
 
 import shadowImg from "../assets/leaflet-icons/marker-shadow.png";
 
@@ -12,14 +13,17 @@ import violetMarkerLargeImg from "../assets/leaflet-icons/marker-icon-2x-violet.
 import greyMarkerLargeImg from "../assets/leaflet-icons/marker-icon-2x-grey.png";
 import blackMarkerLargeImg from "../assets/leaflet-icons/marker-icon-2x-black.png";
 
-export const BlueMarker = new Icon({
-  iconUrl: blueMarkerLargeImg,
-  shadowUrl: shadowImg,
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-  popupAnchor: [1, -34],
-  shadowSize: [41, 41]
-});
+export const BlueMarker =
+  typeof window !== undefined
+    ? new Icon({
+        iconUrl: blueMarkerLargeImg,
+        shadowUrl: shadowImg,
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+      })
+    : null;
 
 export const GoldMarker = new Icon({
   iconUrl: goldMarkerLargeImg,
