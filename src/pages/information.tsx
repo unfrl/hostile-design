@@ -61,6 +61,7 @@ const InformationPage: FunctionComponent = props => {
           return (
             <React.Fragment>
               <InformationCard
+                key={index}
                 category={category}
                 variant={index % 2 == 0 ? "Left" : "Right"}
               />

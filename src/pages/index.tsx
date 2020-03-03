@@ -2,10 +2,16 @@ import React, { FunctionComponent } from "react";
 import { makeStyles, Grid, Typography } from "@material-ui/core";
 import { Map, Marker, Popup, TileLayer } from "react-leaflet";
 
-import { SEO, PageHeader, Legend } from "../components";
+import {
+  SEO,
+  PageHeader,
+  Legend,
+  BlueTestMarker,
+  LeafletMarker
+} from "../components";
 import { MainLayout } from "../layouts";
 import hostileData from "../data/hostile.yaml";
-import { determineMarkerIcon } from "../utils";
+import { determineMarkerIconFromCategory } from "../utils";
 import { ILocation } from "../data";
 
 const useStyles = makeStyles(theme => ({
@@ -34,11 +40,15 @@ const IndexPage: FunctionComponent = () => {
           />
           {hostileData.locations.map((info: ILocation, index: number) => {
             const { type, lat, long, notes } = info;
-            var markerIcon = determineMarkerIcon(type);
+            var markerIcon = determineMarkerIconFromCategory(type);
             return (
-              <Marker icon={markerIcon} key={index} position={[lat, long]}>
-                <Popup>{notes}</Popup>
-              </Marker>
+              <LeafletMarker
+                MarkerIcon={markerIcon}
+                lat={lat}
+                long={long}
+                key={index}
+                notes={notes}
+              ></LeafletMarker>
             );
           })}
         </Map>

@@ -1,16 +1,6 @@
 import { Icon } from "leaflet";
 
 import hostileData from "../data/hostile.yaml";
-import {
-  BlueMarker,
-  GoldMarker,
-  GreenMarker,
-  VioletMarker,
-  RedMarker,
-  GreyMarker,
-  BlackMarker,
-  OrangeMarker
-} from "../components";
 
 //Stolen from: https://github.com/pointhi/leaflet-color-markers
 import blueMarkerLargeImg from "../assets/leaflet-icons/marker-icon-2x-blue.png";
@@ -22,15 +12,40 @@ import yellowMarkerLargeImg from "../assets/leaflet-icons/marker-icon-2x-yellow.
 import violetMarkerLargeImg from "../assets/leaflet-icons/marker-icon-2x-violet.png";
 import greyMarkerLargeImg from "../assets/leaflet-icons/marker-icon-2x-grey.png";
 import blackMarkerLargeImg from "../assets/leaflet-icons/marker-icon-2x-black.png";
-import { CategoryNames, ICategory } from "../data";
+import { CategoryNames, ICategory, MarkerIcons } from "../data";
 
-export function determineMarkerIconPath(
+export function determineMarkerIconFromCategory(
   locationType: CategoryNames
-): string | undefined {
+): MarkerIcons | undefined {
   for (let typeInfo of hostileData.categories as ICategory[]) {
     if (locationType == typeInfo.name) {
-      return determineMarkerIconPathFromColor(typeInfo.icon);
+      return typeInfo.icon;
     }
+  }
+}
+
+export function determineMarkerIconPath(
+  markerIcon: MarkerIcons | undefined
+): string | undefined {
+  switch (markerIcon) {
+    case MarkerIcons.BLUE:
+      return blueMarkerLargeImg;
+    case MarkerIcons.GOLD:
+      return goldMarkerLargeImg;
+    case MarkerIcons.GREEN:
+      return greenMarkerLargeImg;
+    case MarkerIcons.VIOLET:
+      return violetMarkerLargeImg;
+    case MarkerIcons.RED:
+      return redMarkerLargeImg;
+    case MarkerIcons.GREY:
+      return greenMarkerLargeImg;
+    case MarkerIcons.BLACK:
+      return blackMarkerLargeImg;
+    case MarkerIcons.ORANGE:
+      return orangeMarkerLargeImg;
+    default:
+      return undefined;
   }
 }
 
@@ -54,37 +69,6 @@ export function determineMarkerIconPathFromColor(
       return blackMarkerLargeImg;
     case "ORANGE":
       return orangeMarkerLargeImg;
-    default:
-      return undefined;
-  }
-}
-
-export function determineMarkerIcon(locationType: string): Icon | undefined {
-  for (let typeInfo of hostileData.categories) {
-    if (locationType == typeInfo.name) {
-      return determineMarkerIconFromColor(typeInfo.icon);
-    }
-  }
-}
-
-export function determineMarkerIconFromColor(icon: string): Icon | undefined {
-  switch (icon) {
-    case "BLUE":
-      return BlueMarker;
-    case "GOLD":
-      return GoldMarker;
-    case "GREEN":
-      return GreenMarker;
-    case "VIOLET":
-      return VioletMarker;
-    case "RED":
-      return RedMarker;
-    case "GREY":
-      return GreyMarker;
-    case "BLACK":
-      return BlackMarker;
-    case "ORANGE":
-      return OrangeMarker;
     default:
       return undefined;
   }

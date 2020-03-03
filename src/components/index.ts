@@ -8,4 +8,5 @@ export { default as Legend } from "./Legend";
 export { default as LegendEntry } from "./LegendEntry";
 export { default as InformationCard } from "./InformationCard";
 export { default as CountermeasureCard } from "./CountermeasureCard";
+export { default as LeafletMarker } from "./LeafletMarker";
 export * from "./LeafletMarkers";

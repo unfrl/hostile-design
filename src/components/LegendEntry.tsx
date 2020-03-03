@@ -18,7 +18,7 @@ import VisibilityOffIcon from "@material-ui/icons/VisibilityOff";
 import SecurityIcon from "@material-ui/icons/Security";
 import VolumeUpIcon from "@material-ui/icons/VolumeUp";
 import greenMarkerIcon from "../assets/leaflet-icons/marker-icon-2x-green.png";
-import { determineMarkerIcon, determineMarkerIconPath } from "../utils";
+import { determineMarkerIconPath } from "../utils";
 
 const useStyles = makeStyles(theme => ({
   item: {
@@ -74,7 +74,7 @@ const LegendEntry: FunctionComponent<ILegendEntryProps> = props => {
             <span className={classes.title}>
               {category.title}
               <img
-                src={determineMarkerIconPath(category.name)}
+                src={determineMarkerIconPath(category.icon)}
                 className={classes.mapMarker}
               />
             </span>
