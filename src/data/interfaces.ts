@@ -23,10 +23,18 @@ export enum MarkerIcons {
 //This is the expected structure of the data in hostile.yaml under the 'categories' list
 export interface ICategory {
   name: CategoryNames;
-  friendlyName: string;
+  title: string;
   icon: MarkerIcons;
   legendEntry: string;
   infoEntry: string;
+  countermeasures?: ICountermeasure[];
+}
+
+export interface ICountermeasure {
+  name: string;
+  title: string;
+  icon: string;
+  description: string;
 }
 
 //This is the expected structure of the data in hostile.yaml under the 'locations' list

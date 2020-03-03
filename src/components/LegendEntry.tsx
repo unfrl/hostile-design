@@ -72,7 +72,7 @@ const LegendEntry: FunctionComponent<ILegendEntryProps> = props => {
           avatar={<Avatar>{determineLegendIcon(category.name)}</Avatar>}
           title={
             <span className={classes.title}>
-              {category.friendlyName}
+              {category.title}
               <img
                 src={determineMarkerIconPath(category.name)}
                 className={classes.mapMarker}

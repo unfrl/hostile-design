@@ -61,7 +61,7 @@ const InformationCard: FunctionComponent<IInformationCardProps> = props => {
         <Card>
           <a className={classes.anchor} id="web"></a>
           <CardHeader
-            title={category.friendlyName}
+            title={category.title}
             subheader="blah blah imma subheader"
           />
           <div className={classes.cardContent}>
@@ -82,8 +82,6 @@ const InformationCard: FunctionComponent<IInformationCardProps> = props => {
         </Card>
       </Grid>
 
-      {left && <br />}
-
       {!left && (
         <React.Fragment>
           <Hidden smDown={true}>
@@ -91,7 +89,6 @@ const InformationCard: FunctionComponent<IInformationCardProps> = props => {
               <ImageTransition src={webapp_img} />
             </Grid>
           </Hidden>
-          <br />
         </React.Fragment>
       )}
     </React.Fragment>

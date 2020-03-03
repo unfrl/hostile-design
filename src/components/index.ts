@@ -7,4 +7,5 @@ export { default as Logo } from "./Logo";
 export { default as Legend } from "./Legend";
 export { default as LegendEntry } from "./LegendEntry";
 export { default as InformationCard } from "./InformationCard";
+export { default as CountermeasureCard } from "./CountermeasureCard";
 export * from "./LeafletMarkers";

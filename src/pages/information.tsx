@@ -5,7 +5,8 @@ import {
   PageHeader,
   ImageTransition,
   SEO,
-  InformationCard
+  InformationCard,
+  CountermeasureCard
 } from "../components";
 import {
   Theme,
@@ -20,13 +21,7 @@ import {
 } from "@material-ui/core";
 
 import hostileData from "../data/hostile.yaml";
-import { ICategory } from "../data";
-
-import webapp_img from "../assets/undraw_website.svg";
-import mobileapp_img from "../assets/undraw_mobileapp_teardown.svg";
-import desktopapp_img from "../assets/undraw_desktop.svg";
-import undraw_hologram from "../assets/undraw_hologram.svg";
-import crossplatform_img from "../assets/undraw_device_sync.svg";
+import { ICategory, ICountermeasure } from "../data";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -64,10 +59,18 @@ const InformationPage: FunctionComponent = props => {
       <Grid container spacing={3}>
         {categories.map((category: ICategory, index: number) => {
           return (
-            <InformationCard
-              category={category}
-              variant={index % 2 == 0 ? "Left" : "Right"}
-            />
+            <React.Fragment>
+              <InformationCard
+                category={category}
+                variant={index % 2 == 0 ? "Left" : "Right"}
+              />
+              {category.countermeasures && (
+                <CountermeasureCard
+                  categoryTitle={category.title}
+                  countermeasures={category.countermeasures}
+                />
+              )}
+            </React.Fragment>
           );
         })}
       </Grid>

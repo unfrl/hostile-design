@@ -1,44 +1,88 @@
 categories:
   - name: CAMERA
-    friendlyName: Camera
+    title: Cameras
     icon: BLUE
     legendEntry: "Cameras suck for reasons. Dreamcatcher literally woke synth vaporware cronut kickstarter pickled man bun put a bird on it organic. Fanny pack cardigan health goth, typewriter hella venmo try-hard marfa yuccie pok pok mixtape VHS."
     infoEntry: "Celiac fanny pack chillwave, tacos farm-to-table shoreditch XOXO woke vaporware. Poutine normcore roof party mustache letterpress, semiotics marfa YOLO deep v small batch single-origin coffee. Locavore readymade shoreditch irony gentrify lumbersexual chillwave 90's selfies unicorn vegan squid ennui. Pug deep v roof party, mustache drinking vinegar mlkshk YOLO austin intelligentsia freegan green juice narwhal vaporware. Synth godard copper mug next level food truck austin XOXO beard. Skateboard celiac stumptown shoreditch you probably haven't heard of them 90's woke YOLO put a bird on it. Fam williamsburg kombucha ennui, shaman farm-to-table swag portland heirloom stumptown thundercats everyday carry enamel pin."
+    countermeasures:
+      - name: PAINT
+        title: Paint
+        icon: PAINT
+        description: "Cameras can be painted over, duh. Celiac fanny pack chillwave, tacos farm-to-table shoreditch XOXO woke vaporware. Poutine normcore roof party mustache letterpress, semiotics marfa YOLO deep v small batch single-origin coffee. "
+      - name: UNPLUG
+        title: Unplug
+        icon: UNPLUG
+        description: "Cameras can be unplugged too, duh. Celiac fanny pack chillwave, tacos farm-to-table shoreditch XOXO woke vaporware. Poutine normcore roof party mustache letterpress, semiotics marfa YOLO deep v small batch single-origin coffee. "
   - name: SIGNAGE
-    friendlyName: Signage
+    title: Signage
     icon: GOLD
     legendEntry: "Mean signage sucks for reasons. Celiac fanny pack chillwave, tacos farm-to-table shoreditch XOXO woke vaporware. Poutine normcore roof party mustache letterpress, semiotics marfa YOLO deep v small batch single-origin coffee."
     infoEntry: "Celiac fanny pack chillwave, tacos farm-to-table shoreditch XOXO woke vaporware. Poutine normcore roof party mustache letterpress, semiotics marfa YOLO deep v small batch single-origin coffee. Locavore readymade shoreditch irony gentrify lumbersexual chillwave 90's selfies unicorn vegan squid ennui. Pug deep v roof party, mustache drinking vinegar mlkshk YOLO austin intelligentsia freegan green juice narwhal vaporware. Synth godard copper mug next level food truck austin XOXO beard. Skateboard celiac stumptown shoreditch you probably haven't heard of them 90's woke YOLO put a bird on it. Fam williamsburg kombucha ennui, shaman farm-to-table swag portland heirloom stumptown thundercats everyday carry enamel pin."
+    countermeasures:
+      - name: PAINT
+        title: Paint
+        icon: PAINT
+        description: "Signs can be painted over, duh."
   - name: SPIKES
-    friendlyName: Spikes
+    title: Spikes
     icon: GREEN
     legendEntry: "Spikes suck for reasons. Locavore readymade shoreditch irony gentrify lumbersexual chillwave 90's selfies unicorn vegan squid ennui. Pug deep v roof party, mustache drinking vinegar mlkshk YOLO austin intelligentsia freegan green juice narwhal vaporware."
     infoEntry: "Celiac fanny pack chillwave, tacos farm-to-table shoreditch XOXO woke vaporware. Poutine normcore roof party mustache letterpress, semiotics marfa YOLO deep v small batch single-origin coffee. Locavore readymade shoreditch irony gentrify lumbersexual chillwave 90's selfies unicorn vegan squid ennui. Pug deep v roof party, mustache drinking vinegar mlkshk YOLO austin intelligentsia freegan green juice narwhal vaporware. Synth godard copper mug next level food truck austin XOXO beard. Skateboard celiac stumptown shoreditch you probably haven't heard of them 90's woke YOLO put a bird on it. Fam williamsburg kombucha ennui, shaman farm-to-table swag portland heirloom stumptown thundercats everyday carry enamel pin."
+    countermeasures:
+      - name: CARDBOARD
+        title: Cardboard
+        icon: CARDBOARD
+        description: "Cardboard can be laid down on many types of spikes to make them less effective."
   - name: BLOCKADE
-    friendlyName: Blockade
+    title: Blockades
     icon: VIOLET
     legendEntry: "Blockades suck for reasons. Synth godard copper mug next level food truck austin XOXO beard. Skateboard celiac stumptown shoreditch you probably haven't heard of them 90's woke YOLO put a bird on it."
     infoEntry: "Celiac fanny pack chillwave, tacos farm-to-table shoreditch XOXO woke vaporware. Poutine normcore roof party mustache letterpress, semiotics marfa YOLO deep v small batch single-origin coffee. Locavore readymade shoreditch irony gentrify lumbersexual chillwave 90's selfies unicorn vegan squid ennui. Pug deep v roof party, mustache drinking vinegar mlkshk YOLO austin intelligentsia freegan green juice narwhal vaporware. Synth godard copper mug next level food truck austin XOXO beard. Skateboard celiac stumptown shoreditch you probably haven't heard of them 90's woke YOLO put a bird on it. Fam williamsburg kombucha ennui, shaman farm-to-table swag portland heirloom stumptown thundercats everyday carry enamel pin."
+    countermeasures:
+      - name: BOLT_CUTTERS
+        title: Bolt Cutters
+        icon: BOLT_CUTTERS
+        description: "Certains blockages can be easily cut with bolt cutters"
   - name: BENCH
-    friendlyName: Bench
+    title: Benches
     icon: RED
     legendEntry: "Bad benches suck for reasons. Woke lomo kombucha tacos fingerstache venmo letterpress small batch trust fund fam leggings. Edison bulb hell of enamel pin migas tilde meh."
     infoEntry: "Celiac fanny pack chillwave, tacos farm-to-table shoreditch XOXO woke vaporware. Poutine normcore roof party mustache letterpress, semiotics marfa YOLO deep v small batch single-origin coffee. Locavore readymade shoreditch irony gentrify lumbersexual chillwave 90's selfies unicorn vegan squid ennui. Pug deep v roof party, mustache drinking vinegar mlkshk YOLO austin intelligentsia freegan green juice narwhal vaporware. Synth godard copper mug next level food truck austin XOXO beard. Skateboard celiac stumptown shoreditch you probably haven't heard of them 90's woke YOLO put a bird on it. Fam williamsburg kombucha ennui, shaman farm-to-table swag portland heirloom stumptown thundercats everyday carry enamel pin."
+    countermeasures:
+      - name: SECURITY_BITS
+        title: Removal
+        icon: SECURITY_BITS
+        description: "Remove third bar 'armrest' with security bits"
   - name: GHOST_AMENITIES
-    friendlyName: Ghost Amenities
+    title: Ghost Amenities
     icon: GREY
     legendEntry: "These are weird, expensive, and suck. Ugh irony kombucha art party listicle crucifix raclette typewriter pour-over pok pok hexagon tofu chillwave affogato. Quinoa wayfarers selfies, master cleanse la croix brunch mixtape woke keffiyeh."
     infoEntry: "Celiac fanny pack chillwave, tacos farm-to-table shoreditch XOXO woke vaporware. Poutine normcore roof party mustache letterpress, semiotics marfa YOLO deep v small batch single-origin coffee. Locavore readymade shoreditch irony gentrify lumbersexual chillwave 90's selfies unicorn vegan squid ennui. Pug deep v roof party, mustache drinking vinegar mlkshk YOLO austin intelligentsia freegan green juice narwhal vaporware. Synth godard copper mug next level food truck austin XOXO beard. Skateboard celiac stumptown shoreditch you probably haven't heard of them 90's woke YOLO put a bird on it. Fam williamsburg kombucha ennui, shaman farm-to-table swag portland heirloom stumptown thundercats everyday carry enamel pin."
+    countermeasures:
+      - name: PROVIDE
+        title: Provide amenities
+        icon: PROVIDE
+        description: "Things like porta-potties and hand sanitizer can provide what the city chose not to."
   - name: HARDENED_SECURITY
-    friendlyName: Hardened Security
+    title: Hardened Security
     icon: BLACK
     legendEntry: "WTF even is this? This isnt a military base!  Meh chambray leggings flexitarian, readymade pitchfork unicorn af intelligentsia gochujang drinking vinegar austin wayfarers. Street art pour-over franzen, tacos locavore gentrify selfies unicorn."
     infoEntry: "Celiac fanny pack chillwave, tacos farm-to-table shoreditch XOXO woke vaporware. Poutine normcore roof party mustache letterpress, semiotics marfa YOLO deep v small batch single-origin coffee. Locavore readymade shoreditch irony gentrify lumbersexual chillwave 90's selfies unicorn vegan squid ennui. Pug deep v roof party, mustache drinking vinegar mlkshk YOLO austin intelligentsia freegan green juice narwhal vaporware. Synth godard copper mug next level food truck austin XOXO beard. Skateboard celiac stumptown shoreditch you probably haven't heard of them 90's woke YOLO put a bird on it. Fam williamsburg kombucha ennui, shaman farm-to-table swag portland heirloom stumptown thundercats everyday carry enamel pin."
+    countermeasures:
+      - name: BOLT_CUTTERS
+        title: Bolt Cutters
+        icon: BOLT_CUTTERS
+        description: "Certains bollards can be removed by cutting off the lock at the bottom"
   - name: SENSORY
-    friendlyName: Sensory
+    title: Unpleasant Sensations
     icon: ORANGE
     legendEntry: "Ahhhh make it stop! Pickled bespoke shaman polaroid dreamcatcher waistcoat iPhone fam try-hard edison bulb narwhal neutra bushwick letterpress keffiyeh. Typewriter trust fund copper mug green juice, keffiyeh jianbing hella iceland listicle deep v chia sartorial selfies."
     infoEntry: "Celiac fanny pack chillwave, tacos farm-to-table shoreditch XOXO woke vaporware. Poutine normcore roof party mustache letterpress, semiotics marfa YOLO deep v small batch single-origin coffee. Locavore readymade shoreditch irony gentrify lumbersexual chillwave 90's selfies unicorn vegan squid ennui. Pug deep v roof party, mustache drinking vinegar mlkshk YOLO austin intelligentsia freegan green juice narwhal vaporware. Synth godard copper mug next level food truck austin XOXO beard. Skateboard celiac stumptown shoreditch you probably haven't heard of them 90's woke YOLO put a bird on it. Fam williamsburg kombucha ennui, shaman farm-to-table swag portland heirloom stumptown thundercats everyday carry enamel pin."
+    countermeasures:
+      - name: UNPLUG
+        title: Unplug
+        icon: UNPLUG
+        description: "Some of these are accessible and can be unplugged."
 
 locations:
   - type: CAMERA
