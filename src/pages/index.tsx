@@ -28,6 +28,7 @@ const IndexPage: FunctionComponent = () => {
 
   function RenderMap() {
     if (typeof window !== "undefined") {
+      console.log("Loading map");
       return (
         <Map
           center={[40.7599456, -111.9029772]}
