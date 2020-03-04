@@ -1,14 +1,12 @@
 import React, { FunctionComponent } from "react";
 import { makeStyles, Grid, Typography } from "@material-ui/core";
 import { Map, Marker, Popup, TileLayer } from "react-leaflet";
+import { GestureHandling } from "leaflet-gesture-handling";
+import * as L from "leaflet";
+import "leaflet/dist/leaflet.css";
+import "leaflet-gesture-handling/dist/leaflet-gesture-handling.css";
 
-import {
-  SEO,
-  PageHeader,
-  Legend,
-  BlueTestMarker,
-  LeafletMarker
-} from "../components";
+import { SEO, PageHeader, Legend, LeafletMarker } from "../components";
 import { MainLayout } from "../layouts";
 import hostileData from "../data/hostile.yaml";
 import { determineMarkerIconFromCategory } from "../utils";
@@ -26,6 +24,9 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const IndexPage: FunctionComponent = () => {
+  //Needed to get 2-finger scrolling when on mobile
+  L.Map.addInitHook("addHandler", "gestureHandling", GestureHandling);
+
   const classes = useStyles();
 
   function RenderMap() {
@@ -33,6 +34,7 @@ const IndexPage: FunctionComponent = () => {
       console.log("Loading map");
       return (
         <Map
+          gestureHandling={true}
           center={[40.7599456, -111.9029772]}
           zoom={13}
           style={{ height: "100vh", width: "100%" }}
