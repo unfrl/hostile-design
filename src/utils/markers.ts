@@ -39,7 +39,7 @@ export function determineMarkerIconPath(
     case MarkerIcons.RED:
       return redMarkerLargeImg;
     case MarkerIcons.GREY:
-      return greenMarkerLargeImg;
+      return greyMarkerLargeImg;
     case MarkerIcons.BLACK:
       return blackMarkerLargeImg;
     case MarkerIcons.ORANGE:
