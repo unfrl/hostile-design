@@ -7,7 +7,8 @@ import {
   CardHeader,
   Avatar,
   CardContent,
-  Typography
+  Typography,
+  IconButton
 } from "@material-ui/core";
 import PhotoCameraIcon from "@material-ui/icons/PhotoCamera";
 import WarningIcon from "@material-ui/icons/Warning";
@@ -19,6 +20,7 @@ import SecurityIcon from "@material-ui/icons/Security";
 import VolumeUpIcon from "@material-ui/icons/VolumeUp";
 import greenMarkerIcon from "../assets/leaflet-icons/marker-icon-2x-green.png";
 import { determineMarkerIconPath } from "../utils";
+import { Link } from "gatsby";
 
 const useStyles = makeStyles(theme => ({
   item: {
@@ -31,6 +33,9 @@ const useStyles = makeStyles(theme => ({
   mapMarker: {
     marginLeft: "10px",
     maxWidth: "20px"
+  },
+  categoryIconButton: {
+    padding: theme.spacing(1)
   }
 }));
 
@@ -69,7 +74,16 @@ const LegendEntry: FunctionComponent<ILegendEntryProps> = props => {
     <Grid item xs={12} className={classes.item}>
       <Card>
         <CardHeader
-          avatar={<Avatar>{determineLegendIcon(category.name)}</Avatar>}
+          avatar={
+            <IconButton
+              className={classes.categoryIconButton}
+              aria-label={`${category.title} information`}
+            >
+              <Link to={`information/#${category.name}`}>
+                <Avatar>{determineLegendIcon(category.name)}</Avatar>
+              </Link>
+            </IconButton>
+          }
           title={
             <span className={classes.title}>
               {category.title}
@@ -79,7 +93,7 @@ const LegendEntry: FunctionComponent<ILegendEntryProps> = props => {
               />
             </span>
           }
-          subheader="blah blah blah"
+          subheader={"blah blah blah"}
         />
         <CardContent>
           <Typography variant="body2" color="textSecondary" component="p">

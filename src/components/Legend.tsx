@@ -33,7 +33,10 @@ const Legend: FunctionComponent = props => {
   const classes = useStyles();
   return (
     <Card className={classes.legend}>
-      <CardHeader title="Legend" subheader="Click on each entry to see more" />
+      <CardHeader
+        title="Legend"
+        subheader="Click on each type's icon to see more"
+      />
 
       <Grid>
         {hostileData.categories.map((category: ICategory, index: number) => {

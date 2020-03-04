@@ -59,7 +59,7 @@ const InformationCard: FunctionComponent<IInformationCardProps> = props => {
 
       <Grid item sm={12} md={6}>
         <Card>
-          <a className={classes.anchor} id="web"></a>
+          <a className={classes.anchor} id={category.name}></a>
           <CardHeader
             title={category.title}
             subheader="blah blah imma subheader"
