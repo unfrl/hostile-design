@@ -24,14 +24,13 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const IndexPage: FunctionComponent = () => {
-  //Needed to get 2-finger scrolling when on mobile
-  L.Map.addInitHook("addHandler", "gestureHandling", GestureHandling);
-
   const classes = useStyles();
 
   function RenderMap() {
     if (typeof window !== "undefined") {
-      console.log("Loading map");
+      //Needed to get 2-finger scrolling when on mobile
+      L.Map.addInitHook("addHandler", "gestureHandling", GestureHandling);
+
       return (
         <Map
           gestureHandling={true}
