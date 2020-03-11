@@ -71,7 +71,7 @@ const IndexPage: FunctionComponent = () => {
         <PageHeader
           title={"Hostile.Design"}
           subtitle={
-            "Ethical butcher readymade pitchfork ramps trust fund artisan vaporware bitters you probably haven't heard of them shoreditch. Beard cliche crucifix art party artisan vegan. YOLO lomo subway tile fashion axe, shaman poke mixtape kogi food truck unicorn yr ramps single-origin coffee. Kombucha tumblr salvia hoodie food truck actually messenger bag woke tumeric swag single-origin coffee pinterest."
+            "The neoliberal city, run by landlords and business interests, is waging a campaign against the unsheltered, the young, and the everyday residents of the city. A weapon in this campaign is the use of hostile architecture, a way of creating space as to limit its potential uses; what this means in effect is that the oppressed and the downtrodden are forced out of city spaces. This tool is meant to combat hostile architecture by raising awareness about the tactics used by the economic and political elite as they attempt to recolonize the city."
           }
         ></PageHeader>
         <RenderMap />
