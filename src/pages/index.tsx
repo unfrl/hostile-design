@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react";
-import { makeStyles, Grid, Typography } from "@material-ui/core";
+import { makeStyles, Grid, Typography, Button } from "@material-ui/core";
 import { Map, Marker, Popup, TileLayer } from "react-leaflet";
 import { GestureHandling } from "leaflet-gesture-handling";
 import * as L from "leaflet";
@@ -15,6 +15,9 @@ import { ILocation } from "../data";
 import "../styles/leaflet.css";
 
 const useStyles = makeStyles(theme => ({
+  submitButton: {
+    margin: theme.spacing(2)
+  }
   //   infoDescription: {
   //     textAlign: "center",
   //     [theme.breakpoints.up("md")]: {
@@ -64,7 +67,7 @@ const IndexPage: FunctionComponent = () => {
   return (
     <MainLayout>
       <SEO />
-      <Grid container>
+      <Grid container justify="center" alignItems="center">
         {/* 
           TODO: This map still needs the legend thats in the map, not just the one below the map.
           */}
@@ -74,6 +77,17 @@ const IndexPage: FunctionComponent = () => {
             "The neoliberal city, run by landlords and business interests, is waging a campaign against the unsheltered, the young, and the everyday residents of the city. A weapon in this campaign is the use of hostile architecture, a way of creating space as to limit its potential uses; what this means in effect is that the oppressed and the downtrodden are forced out of city spaces. This tool is meant to combat hostile architecture by raising awareness about the tactics used by the economic and political elite as they attempt to recolonize the city."
           }
         ></PageHeader>
+        <Grid item>
+          <Button
+            className={classes.submitButton}
+            variant="contained"
+            color="primary"
+            target="_blank"
+            href="https://form.jotform.com/shotline/hostiledesign-submission-form"
+          >
+            Submit New Hostile Design
+          </Button>
+        </Grid>
         <RenderMap />
         <Legend />
       </Grid>

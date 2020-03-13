@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
 const Legend: FunctionComponent = props => {
   const classes = useStyles();
   return (
-    <Card className={classes.legend}>
+    <Card className={classes.legend} elevation={0}>
       <CardHeader
         title="Legend"
         subheader="Click on each type's icon to see more"
