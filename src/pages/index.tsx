@@ -84,6 +84,7 @@ const IndexPage: FunctionComponent = () => {
             color="primary"
             target="_blank"
             href="https://form.jotform.com/shotline/hostiledesign-submission-form"
+            rel="noreferrer"
           >
             Submit New Hostile Design
           </Button>

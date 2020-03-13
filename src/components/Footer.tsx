@@ -78,7 +78,11 @@ const Footer: FunctionComponent<IFooterProps> = props => {
             </Grid>
             <Grid item xs={4}>
               <div className={classes.linkArea}>
-                <Link to="/information" className={classes.link}>
+                <Link
+                  to="/information"
+                  aria-label="Information"
+                  className={classes.link}
+                >
                   Information
                 </Link>
                 <IconButton
